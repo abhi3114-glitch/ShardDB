@@ -1,0 +1,28 @@
+=== RUN   TestMemoryStore
+--- PASS: TestMemoryStore (0.00s)
+=== RUN   TestMVCCEncoding
+--- PASS: TestMVCCEncoding (0.00s)
+=== RUN   TestMVCCGet
+Scanning for key=accountA readTs=5 start=6163636f756e7441fffffffffffffffa
+Scanning for key=accountA readTs=10 start=6163636f756e7441fffffffffffffff5
+    storage_test.go:103: ReadTs 10: want v10, got 
+Scanning for key=accountA readTs=15 start=6163636f756e7441fffffffffffffff0
+    storage_test.go:103: ReadTs 15: want v10, got 
+Scanning for key=accountA readTs=20 start=6163636f756e7441ffffffffffffffeb
+    storage_test.go:103: ReadTs 20: want v20, got 
+Scanning for key=accountA readTs=25 start=6163636f756e7441ffffffffffffffe6
+    storage_test.go:103: ReadTs 25: want v20, got 
+Scanning for key=accountA readTs=30 start=6163636f756e7441ffffffffffffffe1
+    storage_test.go:103: ReadTs 30: want v30, got 
+Scanning for key=accountA readTs=100 start=6163636f756e7441ffffffffffffff9b
+    storage_test.go:103: ReadTs 100: want v30, got 
+--- FAIL: TestMVCCGet (0.00s)
+FAIL
+FAIL	github.com/myuser/sharddb/internal/storage	0.048s
+=== RUN   TestWAL
+--- PASS: TestWAL (0.01s)
+PASS
+ok  	github.com/myuser/sharddb/internal/storage/wal	(cached)
+FAIL
+
+

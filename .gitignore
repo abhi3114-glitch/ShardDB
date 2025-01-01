@@ -1,0 +1,16 @@
+# Binaries
+*.exe
+*.dll
+bin/
+
+# Logs
+*.log
+*.out
+
+# Data & State
+data/
+# start_cluster.ps1 (Included now)
+
+# IDEs
+.vscode/
+.idea/
